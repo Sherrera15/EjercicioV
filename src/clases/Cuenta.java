@@ -131,7 +131,8 @@ public class Cuenta {
            + "No. de Identificación: "+this.getIdentificacion()+"\n"
            + "Saldo Actual: "+this.getSaldo_actual()+"\n"
            + "Interes Anual: "+this.getInteres_anual();
-        return aux;
+       
+       return aux;
        }
 
               
