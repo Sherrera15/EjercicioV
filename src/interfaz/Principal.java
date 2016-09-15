@@ -21,6 +21,12 @@ public class Principal extends javax.swing.JFrame {
     
     public Principal() {
         initComponents();
+        cmdGuardar.setEnabled(true);
+        cmdIngresar.setEnabled(false);
+        cmdRetirar.setEnabled(false);
+        cmdActualizar.setEnabled(false);
+        cmdMostrar.setEnabled(false);
+        cmdLimpiar.setEnabled(true);
     }
 
     /**
@@ -240,14 +246,15 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_cmdGuardarActionPerformed
 
     private void cmdIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdIngresarActionPerformed
-      double aux;
+      
+        double aux;
       aux =   cu.ingresar();
      txtResultado.append("Su saldo actual es: "+ aux +"\n");
      
         cmdGuardar.setEnabled(false);
         cmdIngresar.setEnabled(true);
         cmdRetirar.setEnabled(true);
-        cmdActualizar.setEnabled(true);
+        cmdActualizar.setEnabled(false);
         cmdMostrar.setEnabled(true);
         cmdLimpiar.setEnabled(true);
       
@@ -261,6 +268,13 @@ public class Principal extends javax.swing.JFrame {
        double aux;
        aux = cu.retirar();
        txtResultado.append("Su saldo actual es: "+aux+"\n");
+       
+       cmdGuardar.setEnabled(false);
+        cmdIngresar.setEnabled(false);
+        cmdRetirar.setEnabled(true);
+        cmdActualizar.setEnabled(true);
+        cmdMostrar.setEnabled(false);
+        cmdLimpiar.setEnabled(true);
       
        
     }//GEN-LAST:event_cmdRetirarActionPerformed
@@ -269,6 +283,15 @@ public class Principal extends javax.swing.JFrame {
         double aux2;
      aux2 = cu.actualizarSaldo();
      txtResultado.append("Su saldo ha sido actualizado "+aux2+"\n");
+    
+     
+     cmdGuardar.setEnabled(false);
+        cmdIngresar.setEnabled(false);
+        cmdRetirar.setEnabled(false);
+        cmdActualizar.setEnabled(true);
+        cmdMostrar.setEnabled(true);
+        cmdLimpiar.setEnabled(true);
+        
    
     }//GEN-LAST:event_cmdActualizarActionPerformed
 
@@ -278,6 +301,12 @@ public class Principal extends javax.swing.JFrame {
         txtResultado.append("Su saldo actual es: "+cu.getSaldo_actual()+"\n");
         txtResultado.append("El interes anual es: "+cu.getInteres_anual());
         
+        cmdGuardar.setEnabled(false);
+        cmdIngresar.setEnabled(false);
+        cmdRetirar.setEnabled(false);
+        cmdActualizar.setEnabled(false);
+        cmdMostrar.setEnabled(true);
+        cmdLimpiar.setEnabled(true);
     }//GEN-LAST:event_cmdMostrarActionPerformed
 
     private void cmdLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdLimpiarActionPerformed
@@ -287,6 +316,13 @@ public class Principal extends javax.swing.JFrame {
        txtSaldoActual.setText("");
        txtInteresAnual.setText("");
        txtResultado.setText("");
+       
+       cmdGuardar.setEnabled(true);
+        cmdIngresar.setEnabled(false);
+        cmdRetirar.setEnabled(false);
+        cmdActualizar.setEnabled(false);
+        cmdMostrar.setEnabled(false);
+        cmdLimpiar.setEnabled(true);
        
     }//GEN-LAST:event_cmdLimpiarActionPerformed
 
