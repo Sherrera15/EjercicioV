@@ -12,6 +12,7 @@ import javax.swing.JOptionPane;
  * @author Shadia^^
  */
 public class Cuenta {
+    
     private int numeroCuenta;
     private long identificacion;
     private double saldo_actual;
