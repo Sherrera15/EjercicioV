@@ -18,12 +18,14 @@ public class Cuenta {
     private double saldo_actual;
     private double interes_anual;
 
+    
     public Cuenta(int numeroCuenta, long identificacion, double saldo_actual,double interes_anual) {
         this.numeroCuenta = numeroCuenta;
         this.identificacion = identificacion;
         this.saldo_actual = saldo_actual;
         this.interes_anual = interes_anual;
     }
+    
     public Cuenta(int numeroCuenta, long identificacion,double interes_anual) {
         this.numeroCuenta = numeroCuenta;
         this.identificacion = identificacion;
@@ -126,6 +128,7 @@ public class Cuenta {
         return this.saldo_actual;
    }
     
+   
        public String mostrar(){
         String aux;
        aux = "No. de la cuenta: "+this.getNumeroCuenta()+"\n"
